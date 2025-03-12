@@ -60,9 +60,14 @@ int main()
     std::cout <<  operator>=(f2, f2);
 
     std::cout << std::endl << "f1 =";
-    std::cout << Fraction::to_float(f1);
+    std::cout << f1.to_float();
     std::cout << std::endl << "f2 =";
-    std::cout << Fraction::to_float(f2);
+    std::cout << f2.to_float();
+    std::cout << std::endl << "f1 =";
+    std::cout << static_cast<float>(f1);
+    std::cout << std::endl << "f2 =";
+    std::cout << static_cast<float>(f2);
+
 
     return 0;
 }

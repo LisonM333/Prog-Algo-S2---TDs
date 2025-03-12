@@ -10,6 +10,7 @@ std::ostream& operator<<(std::ostream& os, Fraction const& f) {
     return os << f.numerator << "/" << f.denominator;
 }
 
+
 // Fraction operator+(Fraction const& f1, Fraction const& f2) {
 //     return simplify({
 //         f1.numerator * f2.denominator + f2.numerator * f1.denominator,
@@ -147,3 +148,15 @@ Fraction operator/(Fraction const& f1, Fraction const& f2) {
     return simplify(f);
 }
 
+
+//EXERCICE 6
+// 1
+float Fraction::to_float(){
+    Fraction f{numerator, denominator};
+    Fraction F{simplify(f)};
+    return (static_cast<float>(F.numerator)/static_cast<float>(F.denominator));
+}
+// 2
+Fraction:: operator float(){
+    return this->to_float();
+}
