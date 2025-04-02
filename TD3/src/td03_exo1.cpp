@@ -78,4 +78,6 @@ int main(){
     selection_sort(array_inv);
     verif_tri(array_inv);
     std::cout << std::endl;
+
+    return 0;
 }
